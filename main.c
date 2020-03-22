@@ -92,13 +92,13 @@ int main(int argc,char **argv){
         if(*gpio1 & GPIO1_D0_READ){
             *gpio5 |= GPIO5_D0_HIGH;
             usleep(250000);
-            *gpio5 &= GPIO5_D0_OUT;
+            *gpio5 &= GPIO5_D0_LOW;
         }
 
         if(*gpio1 & GPIO1_D1_READ){
             *gpio5 |= GPIO5_D1_HIGH;
             usleep(250000);
-            *gpio5 &= GPIO5_D1_OUT;
+            *gpio5 &= GPIO5_D1_LOW;
         }
     }
 
